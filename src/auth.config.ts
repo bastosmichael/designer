@@ -16,12 +16,6 @@ const CredentialsSchema = z.object({
   password: z.string(),
 });
 
-declare module "next-auth/jwt" {
-  interface JWT {
-    id: string | undefined;
-  }
-}
-
 declare module "@auth/core/jwt" {
   interface JWT {
     id: string | undefined;
