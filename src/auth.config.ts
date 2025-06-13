@@ -1,5 +1,6 @@
 import { z } from "zod";
 import bcrypt from "bcryptjs";
+import type { AuthConfig } from "@auth/core";
 import type { NextAuthConfig } from "next-auth";
 import { eq } from "drizzle-orm";
 import { JWT } from "next-auth/jwt";
@@ -22,19 +23,13 @@ declare module "next-auth/jwt" {
   }
 }
 
-declare module "@auth/core/jwt" {
-  interface JWT {
-    id: string | undefined;
-  }
-}
-
 export default {
   adapter: DrizzleAdapter(db),
   providers: [
     Credentials({
       credentials: {
         email: { label: "Email", type: "email" },
-        pasword: { label: "Password", type: "password" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         const validatedFields = CredentialsSchema.safeParse(credentials);
@@ -86,7 +81,7 @@ export default {
 
       return session;
     },
-    jwt({ token, user }) {
+    jwt({ token, user, account }) {
       if (user) {
         token.id = user.id;  
       }
@@ -94,4 +89,4 @@ export default {
       return token;
     }
   },
-} satisfies NextAuthConfig
+} satisfies NextAuthConfig;

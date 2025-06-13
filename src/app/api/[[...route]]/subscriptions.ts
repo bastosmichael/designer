@@ -20,7 +20,7 @@ const app = new Hono()
     const [subscription] = await db
       .select()
       .from(subscriptions)
-      .where(eq(subscriptions.userId, auth.token.id));
+      .where(eq(subscriptions.userId, String(auth.token.id)));
 
     if (!subscription) {
       return c.json({ error: "No subscription found" }, 404);
@@ -47,7 +47,7 @@ const app = new Hono()
     const [subscription] = await db
       .select()
       .from(subscriptions)
-      .where(eq(subscriptions.userId, auth.token.id));
+      .where(eq(subscriptions.userId, String(auth.token.id)));
 
     const active = checkIsActive(subscription);
 
@@ -79,7 +79,7 @@ const app = new Hono()
         },
       ],
       metadata: {
-        userId: auth.token.id,
+        userId: String(auth.token.id),
       },
     });
 
