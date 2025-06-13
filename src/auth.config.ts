@@ -1,11 +1,11 @@
 import { z } from "zod";
 import bcrypt from "bcryptjs";
-import type { NextAuthConfig } from "next-auth";
+import type { AuthConfig } from "@auth/core";
 import { eq } from "drizzle-orm";
-import { JWT } from "next-auth/jwt";
-import GitHub from "next-auth/providers/github";
-import Google from "next-auth/providers/google";
-import Credentials from "next-auth/providers/credentials";
+import { JWT } from "@auth/core/jwt";
+import GitHub from "@auth/core/providers/github";
+import Google from "@auth/core/providers/google";
+import Credentials from "@auth/core/providers/credentials";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
 
 import { db } from "@/db/drizzle";
@@ -94,4 +94,4 @@ export default {
       return token;
     }
   },
-} satisfies NextAuthConfig
+} satisfies AuthConfig
