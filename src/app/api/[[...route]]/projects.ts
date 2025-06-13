@@ -52,7 +52,7 @@ const app = new Hono()
         .where(
           and(
             eq(projects.id, id),
-            eq(projects.userId, auth.token.id),
+            eq(projects.userId, auth.token.id as string),
           ),
         )
         .returning();
@@ -82,7 +82,7 @@ const app = new Hono()
         .where(
           and(
             eq(projects.id, id),
-            eq(projects.userId, auth.token.id),
+            eq(projects.userId, auth.token.id as string),
           ),
         );
 
@@ -99,7 +99,7 @@ const app = new Hono()
           json: project.json,
           width: project.width,
           height: project.height,
-          userId: auth.token.id,
+          userId: auth.token.id as string,
           createdAt: new Date(),
           updatedAt: new Date(),
         })
@@ -129,7 +129,7 @@ const app = new Hono()
       const data = await db
         .select()
         .from(projects)
-        .where(eq(projects.userId, auth.token.id))
+        .where(eq(projects.userId, auth.token.id as string))
         .limit(limit)
         .offset((page - 1) * limit)
         .orderBy(desc(projects.updatedAt))
@@ -176,7 +176,7 @@ const app = new Hono()
         .where(
           and(
             eq(projects.id, id),
-            eq(projects.userId, auth.token.id),
+            eq(projects.userId, auth.token.id as string),
           ),
         )
         .returning();
@@ -206,7 +206,7 @@ const app = new Hono()
         .where(
           and(
             eq(projects.id, id),
-            eq(projects.userId, auth.token.id)
+            eq(projects.userId, auth.token.id as string)
           )
         );
 
@@ -244,7 +244,7 @@ const app = new Hono()
           json,
           width,
           height,
-          userId: auth.token.id,
+          userId: auth.token.id as string,
           createdAt: new Date(),
           updatedAt: new Date(),
         })
