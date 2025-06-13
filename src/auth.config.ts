@@ -1,6 +1,6 @@
 import { z } from "zod";
 import bcrypt from "bcryptjs";
-import type { AuthConfig } from "@auth/core";
+import type { NextAuthConfig } from "next-auth";
 import { eq } from "drizzle-orm";
 import { JWT } from "next-auth/jwt";
 import GitHub from "@auth/core/providers/github";
@@ -86,7 +86,7 @@ export default {
 
       return session;
     },
-    jwt({ token, user }) {
+    jwt({ token, user, account }) {
       if (user) {
         token.id = user.id;  
       }
@@ -94,4 +94,4 @@ export default {
       return token;
     }
   },
-} satisfies AuthConfig
+} satisfies NextAuthConfig
