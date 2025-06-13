@@ -1,11 +1,11 @@
 import { z } from "zod";
 import bcrypt from "bcryptjs";
-import type { NextAuthConfig } from "next-auth";
+import type { AuthConfig } from "@auth/core";
 import { eq } from "drizzle-orm";
 import { JWT } from "next-auth/jwt";
-import GitHub from "next-auth/providers/github";
-import Google from "next-auth/providers/google";
-import Credentials from "next-auth/providers/credentials";
+import GitHub from "@auth/core/providers/github";
+import Google from "@auth/core/providers/google";
+import Credentials from "@auth/core/providers/credentials";
 import { DrizzleAdapter } from "@auth/drizzle-adapter";
 
 import { db } from "@/db/drizzle";
@@ -34,7 +34,7 @@ export default {
     Credentials({
       credentials: {
         email: { label: "Email", type: "email" },
-        pasword: { label: "Password", type: "password" },
+        password: { label: "Password", type: "password" },
       },
       async authorize(credentials) {
         const validatedFields = CredentialsSchema.safeParse(credentials);
@@ -94,4 +94,4 @@ export default {
       return token;
     }
   },
-} satisfies NextAuthConfig
+} satisfies AuthConfig
