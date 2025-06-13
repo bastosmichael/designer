@@ -8,6 +8,19 @@ on:
 jobs:
   lint-build-test:
     runs-on: ubuntu-latest
+    env:
+      DATABASE_URL: postgres://user:pass@localhost/db
+      NEXT_PUBLIC_APP_URL: http://localhost:3000
+      AUTH_SECRET: secret
+      NEXT_PUBLIC_UNSPLASH_ACCESS_KEY: dummy
+      REPLICATE_API_TOKEN: dummy
+      STRIPE_SECRET_KEY: dummy
+      STRIPE_PRICE_ID: dummy
+      STRIPE_WEBHOOK_SECRET: dummy
+      GITHUB_CLIENT_ID: dummy
+      GITHUB_CLIENT_SECRET: dummy
+      GOOGLE_CLIENT_ID: dummy
+      GOOGLE_CLIENT_SECRET: dummy
 
     steps:
       - name: Checkout repository
