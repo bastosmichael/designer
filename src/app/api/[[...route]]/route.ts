@@ -16,9 +16,9 @@ export const runtime = "nodejs";
 function getAuthConfig(c: Context): AuthConfig {
   return {
     secret: c.env.AUTH_SECRET,
-    ...authConfig
+    ...(authConfig as unknown as AuthConfig),
   };
-};
+}
 
 const app = new Hono().basePath("/api");
 
