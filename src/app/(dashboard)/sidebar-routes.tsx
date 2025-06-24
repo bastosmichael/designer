@@ -46,7 +46,7 @@ export const SidebarRoutes = () => {
               size="lg"
             >
               <Crown className="mr-2 size-4 fill-yellow-500 text-yellow-500" />
-              Upgrade to Image AI Pro
+              Upgrade to Designer Pro
             </Button>
           </div>
           <div className="px-3">
@@ -73,7 +73,7 @@ export const SidebarRoutes = () => {
           onClick={onClick}
         />
         <SidebarItem
-          href="mailto:support@codewithantonio.com"
+          href="mailto:support@example.com"
           icon={MessageCircleQuestion}
           label="Get Help"
         />

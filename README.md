@@ -1,8 +1,8 @@
-# Image AI
+# Designer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Image AI is a web-based design tool that combines a rich canvas editor with AI services for generating and editing images. It helps creators build professional assets quickly with easy templates, AI-assisted features, and a modern subscription model.
+Designer is a web-based design tool that combines a rich canvas editor with AI services for generating and editing images. It helps creators build professional assets quickly with easy templates, AI-assisted features, and a modern subscription model.
 
 ## Table of Contents
 
