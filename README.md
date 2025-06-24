@@ -1,13 +1,12 @@
-# Image AI
+# Designer
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Image AI is a web-based design tool that combines a rich canvas editor with AI services for generating and editing images. It helps creators build professional assets quickly with easy templates, AI-assisted features, and a modern subscription model.
+Designer is a web-based design tool that combines a rich canvas editor with AI services for generating and editing images. It helps creators build professional assets quickly with easy templates, AI-assisted features, and a modern subscription model.
 
 ## Table of Contents
 
 - [Features](#features)
-- [Demo](#demo)
 - [Setup](#setup)
   - [Simple Mode Setup](#simple-mode-setup)
   - [Advanced Mode Setup](#advanced-mode-setup)
@@ -31,29 +30,19 @@ Image AI is a web-based design tool that combines a rich canvas editor with AI s
 - Upload and store assets through UploadThing.
 - Responsive UI built with Next.js 14 and Tailwind CSS.
 
-## Demo
-
-Coming soon!
-
 ## Setup
 
 Both quick start and advanced steps are provided below. Ensure all environment variables are configured.
 
 ### Simple Mode Setup
 
-1. **Clone the Repository**
-   ```bash
-   git clone [repo-url]
-   cd designer
-   ```
-
-2. **Install Dependencies**
+1. **Install Dependencies**
 
    ```bash
    npm install
    ```
 
-3. **Configure Environment**
+2. **Configure Environment**
 
    ```bash
    cp .env.example .env.local
@@ -72,7 +61,7 @@ Both quick start and advanced steps are provided below. Ensure all environment v
    * `GITHUB_CLIENT_ID` and `GITHUB_CLIENT_SECRET`
    * `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`
 
-4. **Run the App**
+3. **Run the App**
 
    ```bash
    npm run dev
