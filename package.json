@@ -35,7 +35,7 @@
     "drizzle-orm": "^0.44.4",
     "drizzle-zod": "^0.8.3",
     "fabric": "5.3.0-browser",
-    "hono": "^4.8.12",
+    "hono": "^4.9.0",
     "jsdom": "^26.1.0",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.537.0",
