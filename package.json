@@ -34,7 +34,7 @@
     "date-fns": "^4.1.0",
     "drizzle-orm": "^0.44.5",
     "drizzle-zod": "^0.8.3",
-    "fabric": "5.3.0-browser",
+    "fabric": "6.7.1",
     "hono": "^4.9.8",
     "jsdom": "^27.0.0",
     "lodash.debounce": "^4.0.8",
