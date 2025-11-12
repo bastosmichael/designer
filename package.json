@@ -36,7 +36,7 @@
     "drizzle-zod": "^0.8.3",
     "fabric": "5.3.0-browser",
     "hono": "^4.10.4",
-    "jsdom": "^27.1.0",
+    "jsdom": "^27.2.0",
     "lodash.debounce": "^4.0.8",
     "lucide-react": "^0.553.0",
     "material-colors": "^1.2.6",
