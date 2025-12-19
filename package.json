@@ -15,7 +15,7 @@
     "@auth/core": "^0.41.0",
     "@auth/drizzle-adapter": "^1.11.1",
     "@hono/auth-js": "^1.1.0",
-    "@hono/zod-validator": "^0.7.5",
+    "@hono/zod-validator": "^0.7.6",
     "@neondatabase/serverless": "^1.0.2",
     "@radix-ui/react-avatar": "^1.1.11",
     "@radix-ui/react-dialog": "^1.1.15",
