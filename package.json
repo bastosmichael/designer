@@ -57,7 +57,7 @@
     "uploadthing": "^6.13.2",
     "use-file-picker": "^2.1.2",
     "uuidv4": "^6.2.13",
-    "zod": "^4.3.4",
+    "zod": "^4.3.5",
     "zustand": "^5.0.9"
   },
   "devDependencies": {
