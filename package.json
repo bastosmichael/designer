@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "@auth/core": "^0.41.2",
-    "@auth/drizzle-adapter": "^1.11.1",
+    "@auth/drizzle-adapter": "^1.11.2",
     "@hono/auth-js": "^1.1.1",
     "@hono/zod-validator": "^0.7.6",
     "@neondatabase/serverless": "^1.0.2",
