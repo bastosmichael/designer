@@ -58,7 +58,7 @@
     "use-file-picker": "^2.1.2",
     "uuidv4": "^6.2.13",
     "zod": "^4.4.3",
-    "zustand": "^5.0.13"
+    "zustand": "^5.0.14"
   },
   "devDependencies": {
     "@types/bcryptjs": "^3.0.0",
